@@ -1,7 +1,7 @@
 node{
 	def mavenHome = tool name: 'maven3.9.1'
  stage('1.CodeClone'){
-    git credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
+    git credentialsId: 'gitHubCredentials', url: 'https://github.com/Fortress-Technology/maven-web-application'
    }
  stage('2MavenBuild'){
    sh "${mavenHome}/bin/mvn package"
@@ -30,7 +30,7 @@ node{
 
 Build is done.
 
-LANDMARKTECH''', recipientProviders: [developers(), contributor(), upstreamDevelopers()], subject: 'Build Status', to: 'mylandmarktech@gmail.com'
+FortressTECH''', recipientProviders: [developers(), contributor(), upstreamDevelopers()], subject: 'Build Status', to: 'Fortresstech@gmail.com'
   }
  */  
 }
