@@ -7,7 +7,7 @@ pipeline{
     stage('1GetCode'){
       steps{
         sh "echo 'cloning the latest application version' "
-        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
+        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/FortressTechnology/maven-web-application'
       }
     }
     stage('3Test+Build'){
@@ -49,7 +49,7 @@ Landmark
 Good job build and deployment is successful.
 
 Thanks
-Landmark 
+Fortress 
 +1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     } 
     failure{
@@ -57,7 +57,7 @@ Landmark
 Build failed. Please resolve issues.
 
 Thanks
-Landmark 
+Fortress 
 +1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     }
   } 
