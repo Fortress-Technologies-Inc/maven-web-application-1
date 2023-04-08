@@ -22,7 +22,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git branch: 'development', credentialsId: '957b543e-6f77-4cef-9aec-82e9b0230975', url: 'https://github.com/LandmakTechnology/maven-web-application-1.git'
+    git branch: 'development', credentialsId: '957b543e-6f77-4cef-9aec-82e9b0230975', url: 'https://github.com/Fortress-Technology/maven-web-application-1.git'
 	
 	}
   }
@@ -58,17 +58,17 @@ stages{
 post{
 
  success{
- emailext to: 'mylandmarktech@gmail.com,mylandmarktech@yahoo.com',
+ emailext to: 'Fortresstech@gmail.com,Fortresstech@yahoo.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           replyTo: 'mylandmarktech@gmail.com'
  }
  
  failure{
- emailext to: 'mylandmarktech@gmail.com,mylandmarktech@yahoo.com',
+ emailext to: 'Fortresstech@gmail.com,Fortresstech@yahoo.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'mylandmarktech@gmail.com'
+          replyTo: 'Fortressktech@gmail.com'
  }
  
 }
